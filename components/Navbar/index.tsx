@@ -1,13 +1,15 @@
 import { useTheme } from "next-themes";
-import React, { memo, useContext, useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const [themeEnable, setThemeEnable] = useState(false);
+  const [audio, setAudio]: any = useState<any>();
 
   useEffect(() => {
     setThemeEnable(true);
+    setAudio(new Audio("/assets/click.mp3"));
   }, []);
 
   const themeSetRenderer = () => {
@@ -19,8 +21,10 @@ const Navbar: React.FC = () => {
             className="bg-slate-100 p-1 rounded-lg focus:ring-4"
             onClick={() => {
               setTimeout(() => {
+                audio.volume = 0.1;
+                audio.play();
                 setTheme("light");
-              }, 100);
+              }, 50);
             }}
           >
             <svg
@@ -45,8 +49,10 @@ const Navbar: React.FC = () => {
             className="bg-slate-200 p-1 rounded-lg focus:ring-4"
             onClick={() => {
               setTimeout(() => {
+                audio.volume = 0.1;
+                audio.play();
                 setTheme("dark");
-              }, 100);
+              }, 50);
             }}
           >
             <svg

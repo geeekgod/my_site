@@ -15,7 +15,7 @@ const Footer = () => {
           <a
             target="_blank"
             rel="noreferrer"
-            href="mailto: sris8645208@gmail.com"
+            href="mailto: ris8645208@gmail.com"
           >
             <svg
               className="w-8 mx-1"
