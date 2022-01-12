@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex justify-center py-1">
           <a
             target="_blank"
-            rel="follow refer"
+            rel="noreferrer"
             href="mailto: sris8645208@gmail.com"
           >
             <svg
@@ -32,7 +32,7 @@ const Footer = () => {
 
           <a
             target="_blank"
-            rel="follow refer"
+            rel="noreferrer"
             href="https://github.com/thisisrishabh22/"
           >
             <svg
@@ -53,7 +53,7 @@ const Footer = () => {
 
           <a
             target="_blank"
-            rel="follow refer"
+            rel="noreferrer"
             href="https://instagram.com/thefrontendrish"
           >
             <svg
@@ -72,7 +72,7 @@ const Footer = () => {
 
           <a
             target="_blank"
-            rel="follow refer"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/rishabhh-singh/"
           >
             <svg
