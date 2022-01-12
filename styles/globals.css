@@ -24,3 +24,9 @@ a {
 .body-wrapper {
   min-height: 100vh;
 }
+
+@layer components {
+  body {
+    @apply dark:bg-gray-900;
+  }
+}

@@ -1,15 +1,24 @@
-import React, { memo } from "react";
+import { useTheme } from "next-themes";
+import React, { memo, useEffect, useState } from "react";
 
 const Footer = () => {
+  const { theme } = useTheme();
+  const [themeEnable, setThemeEnable] = useState(false);
+
+  useEffect(() => {
+    setThemeEnable(true);
+  }, []);
   return (
     <footer className="mb-0 mt-auto">
-      <div>
+      <div className="py-2">
         <div className="flex justify-center py-1">
           <svg
             className="w-8 mx-1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="rgba(42,65,81,1)"
+            fill={
+              themeEnable && theme === "light" ? "rgba(42,65,81,1)" : "#FFFF"
+            }
           >
             <path d="M20 4H6c-1.103 0-2 .897-2 2v5h2V8l6.4 4.8a1.001 1.001 0 0 0 1.2 0L20 8v9h-8v2h8c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-7 6.75L6.666 6h12.668L13 10.75z"></path>
             <path d="M2 12h7v2H2zm2 3h6v2H4zm3 3h4v2H7z"></path>
@@ -19,7 +28,9 @@ const Footer = () => {
             className="w-8 mx-1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="rgba(42,65,81,1)"
+            fill={
+              themeEnable && theme === "light" ? "rgba(42,65,81,1)" : "#FFFF"
+            }
           >
             <path
               fillRule="evenodd"
@@ -32,7 +43,9 @@ const Footer = () => {
             className="w-8 mx-1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="rgba(42,65,81,1)"
+            fill={
+              themeEnable && theme === "light" ? "rgba(42,65,81,1)" : "#FFFF"
+            }
           >
             <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
             <circle cx="16.806" cy="7.207" r="1.078"></circle>
@@ -43,12 +56,14 @@ const Footer = () => {
             className="w-8 mx-1"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
-            fill="rgba(42,65,81,1)"
+            fill={
+              themeEnable && theme === "light" ? "rgba(42,65,81,1)" : "#FFFF"
+            }
           >
             <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
           </svg>
         </div>
-        <div className="flex justify-center py-1 pb-3">
+        <div className="flex justify-center py-1 pb-3 dark:text-white">
           <p className="mx-1">Made with &#x1f49d;</p>
           <div className="mx-1">•</div>
           {/*  */}
