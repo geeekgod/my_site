@@ -10,8 +10,8 @@ const Footer = () => {
   }, []);
   return (
     <footer className="mb-0 mt-auto">
-      <div className="py-2">
-        <div className="flex justify-center py-1">
+      <div className="py-4">
+        <div className="flex justify-center py-4">
           <a
             target="_blank"
             rel="noreferrer"

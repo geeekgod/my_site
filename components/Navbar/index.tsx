@@ -1,4 +1,6 @@
 import { useTheme } from "next-themes";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { memo, useEffect, useState } from "react";
 
 const Navbar: React.FC = () => {
@@ -7,10 +9,57 @@ const Navbar: React.FC = () => {
   const [themeEnable, setThemeEnable] = useState(false);
   const [audio, setAudio]: any = useState<any>();
 
+  const router = useRouter();
+
+  const [menu, setMenu] = useState(false);
+
   useEffect(() => {
+    setMenu(false);
+  }, [router]);
+
+  useEffect(() => {
+    setMenu(false);
     setThemeEnable(true);
     setAudio(new Audio("/assets/click.mp3"));
   }, []);
+
+  const menuBtbRenderer = () => {
+    if (menu) {
+      return (
+        <svg
+          className="w-10"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      );
+    } else {
+      return (
+        <svg
+          className="w-10"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      );
+    }
+  };
 
   const themeSetRenderer = () => {
     if (themeEnable) {
@@ -99,15 +148,50 @@ const Navbar: React.FC = () => {
         </div>
         <div className="flex">
           <ul className="hidden slg:flex items-center font-medium dark:text-white">
-            <li className="mx-2">Home</li>
-            <li className="mx-2">Projects</li>
-            <li className="mx-2">About</li>
-            <li className="mx-2">Contact</li>
+            <Link href="/">
+              <li className="mx-2 my-5 text-xl cursor-pointer">Home</li>
+            </Link>
+            <Link href="/">
+              <li className="mx-2 my-5 text-xl cursor-pointer">Projects</li>
+            </Link>
+            <Link href="/about">
+              <li className="mx-2 my-5 text-xl cursor-pointer">About</li>
+            </Link>
+            <Link href="/">
+              <li className="mx-2 my-5 text-xl cursor-pointer">Contact</li>
+            </Link>
           </ul>
-          <div className="flex items-center mx-5 cursor-pointer selection:cursor-not-allowed">
+          <div className="flex items-center z-50 mx-5 cursor-pointer selection:cursor-not-allowed">
             {themeSetRenderer()}
           </div>
+
+          <div
+            className="menu-item flex items-center z-50 slg:hidden"
+            onClick={() => setMenu(!menu)}
+          >
+            {menuBtbRenderer()}
+          </div>
         </div>
+        <ul
+          className={
+            menu
+              ? "flex flex-col py-24 absolute z-40 h-screen w-screen bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
+              : "hidden flex-col py-24 absolute z-40 h-screen w-screen bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
+          }
+        >
+          <Link href="/">
+            <li className="mx-2 my-5 text-xl cursor-pointer">Home</li>
+          </Link>
+          <Link href="/">
+            <li className="mx-2 my-5 text-xl cursor-pointer">Projects</li>
+          </Link>
+          <Link href="/about">
+            <li className="mx-2 my-5 text-xl cursor-pointer">About</li>
+          </Link>
+          <Link href="/">
+            <li className="mx-2 my-5 text-xl cursor-pointer">Contact</li>
+          </Link>
+        </ul>
       </nav>
     </div>
   );
