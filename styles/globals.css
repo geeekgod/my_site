@@ -29,4 +29,10 @@ a {
   body {
     @apply dark:bg-gray-900;
   }
+  .deskTopNavItem {
+    @apply mx-2  cursor-pointer;
+  }
+  .mobileNavItem {
+    @apply mx-2 my-5 text-xl cursor-pointer;
+  }
 }

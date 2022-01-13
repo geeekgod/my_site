@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { memo, useEffect, useState } from "react";
 
+const { motion, AnimatePresence } = require("framer-motion");
 const Navbar: React.FC = () => {
   const { systemTheme, theme, setTheme } = useTheme();
 
@@ -127,7 +128,12 @@ const Navbar: React.FC = () => {
   return (
     <div>
       <nav className="flex justify-around py-6">
-        <div className="flex items-center">
+        <motion.div
+          initial={{ x: -1000 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 90 }}
+          className="flex items-center"
+        >
           <svg
             className="w-12 dark:text-white"
             fill="none"
@@ -135,30 +141,40 @@ const Navbar: React.FC = () => {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
+            <motion.path
+              initial={{ pathLength: 0 }}
+              animate={{
+                pathLength: 1,
+                transition: { delay: 1.6, duration: 1.2 },
+              }}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
               d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            ></path>
+            ></motion.path>
           </svg>
           <h3 className="text-2xl font-semibold ml-2 dark:text-white">
             Rishabh Singh
           </h3>
-        </div>
-        <div className="flex">
+        </motion.div>
+        <motion.div
+          initial={{ y: -1000, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 90 }}
+          className="flex"
+        >
           <ul className="hidden slg:flex items-center font-medium dark:text-white">
             <Link href="/">
-              <li className="mx-2 my-5 text-xl cursor-pointer">Home</li>
+              <li className="deskTopNavItem">Home</li>
             </Link>
             <Link href="/">
-              <li className="mx-2 my-5 text-xl cursor-pointer">Projects</li>
+              <li className="deskTopNavItem">Projects</li>
             </Link>
             <Link href="/about">
-              <li className="mx-2 my-5 text-xl cursor-pointer">About</li>
+              <li className="deskTopNavItem">About</li>
             </Link>
             <Link href="/">
-              <li className="mx-2 my-5 text-xl cursor-pointer">Contact</li>
+              <li className="deskTopNavItem">Contact</li>
             </Link>
           </ul>
           <div className="flex items-center z-50 mx-5 cursor-pointer selection:cursor-not-allowed">
@@ -171,27 +187,61 @@ const Navbar: React.FC = () => {
           >
             {menuBtbRenderer()}
           </div>
-        </div>
-        <ul
-          className={
-            menu
-              ? "flex flex-col py-24 absolute z-40 h-screen w-screen bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
-              : "hidden flex-col py-24 absolute z-40 h-screen w-screen bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
-          }
-        >
-          <Link href="/">
-            <li className="mx-2 my-5 text-xl cursor-pointer">Home</li>
-          </Link>
-          <Link href="/">
-            <li className="mx-2 my-5 text-xl cursor-pointer">Projects</li>
-          </Link>
-          <Link href="/about">
-            <li className="mx-2 my-5 text-xl cursor-pointer">About</li>
-          </Link>
-          <Link href="/">
-            <li className="mx-2 my-5 text-xl cursor-pointer">Contact</li>
-          </Link>
-        </ul>
+        </motion.div>
+        <AnimatePresence>
+          {menu ? (
+            <motion.ul
+              initial={{ opacity: 0, x: -1000 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -1000 }}
+              transition={{ duration: 0.5 }}
+              className={
+                "flex flex-col py-24 absolute z-40 h-screen w-screen bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
+              }
+            >
+              <Link href="/">
+                <motion.li
+                  initial={{ y: -1000 }}
+                  animate={{ y: 0, transition: { delay: 0.4 } }}
+                  transition={{ duration: 0.5 }}
+                  className="mobileNavItem"
+                >
+                  Home
+                </motion.li>
+              </Link>
+              <Link href="/">
+                <motion.li
+                  initial={{ y: -1000 }}
+                  animate={{ y: 0, transition: { delay: 0.5 } }}
+                  transition={{ duration: 0.5 }}
+                  className="mobileNavItem"
+                >
+                  Projects
+                </motion.li>
+              </Link>
+              <Link href="/about">
+                <motion.li
+                  initial={{ y: -1000 }}
+                  animate={{ y: 0, transition: { delay: 0.6 } }}
+                  transition={{ duration: 0.5 }}
+                  className="mobileNavItem"
+                >
+                  About
+                </motion.li>
+              </Link>
+              <Link href="/">
+                <motion.li
+                  initial={{ y: -1000 }}
+                  animate={{ y: 0, transition: { delay: 0.7 } }}
+                  transition={{ duration: 0.5 }}
+                  className="mobileNavItem"
+                >
+                  Contact
+                </motion.li>
+              </Link>
+            </motion.ul>
+          ) : null}
+        </AnimatePresence>
       </nav>
     </div>
   );
