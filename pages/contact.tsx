@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
 import React, { memo, useEffect, useRef, useState } from "react";
 import * as EmailValidator from "email-validator";
+import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -10,10 +11,16 @@ const Contact = () => {
   const [msg, setMsg] = useState("");
   const inputRef = useRef<any>();
   const [width, setWidth] = useState(0);
+  const [msgSent, setMsgSent] = useState(false);
+  const [msgSentErr, setMsgSentErr] = useState(false);
+  const [err, setErr] = useState(false);
 
   const [size, setSize] = useState([0, 0]);
 
   const _submit = (e: any) => {
+    setErr(false);
+    setMsgSent(false);
+    setMsgSentErr(false);
     e.preventDefault();
     if (
       name.trim().length > 4 &&
@@ -22,7 +29,23 @@ const Contact = () => {
       msg.trim().length > 10 &&
       EmailValidator.validate(email)
     ) {
-      console.log({ name: name, email: email, subject: subject, message: msg });
+      axios
+        .post("/api/contact", {
+          name: name,
+          email: email,
+          subject: subject,
+          message: msg,
+        })
+        .then((res: any) => {
+          if (res.data.msg) {
+            setMsgSent(true);
+          }
+        })
+        .catch((err: any) => {
+          console.log(err);
+        });
+    } else {
+      setErr(true);
     }
   };
 
@@ -38,6 +61,24 @@ const Contact = () => {
     }
   }, [inputRef, size]);
 
+  useEffect(() => {
+    setErr(false);
+    setMsgSentErr(false);
+  }, [name, email, subject, msg]);
+
+  useEffect(() => {
+    if (msgSent) {
+      setEmail("");
+      setMsg("");
+      setName("");
+      setSubject("");
+    }
+    setTimeout(() => {
+      setErr(false);
+      setMsgSent(false);
+      setMsgSentErr(false);
+    }, 7000);
+  }, [msgSent, msgSentErr, err]);
   return (
     <>
       <Head>
@@ -150,6 +191,38 @@ const Contact = () => {
           >
             Submit
           </motion.button>
+          <AnimatePresence>
+            {msgSent && (
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                className="bg-green-300 w-[300px] text-center my-2 text-green-800 py-2 px-12 rounded-lg"
+              >
+                <p>Message Sent!</p>
+              </motion.div>
+            )}
+            {msgSentErr && (
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                className="bg-red-300   w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
+              >
+                <p>Please try again later!</p>
+              </motion.div>
+            )}
+            {err && (
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 100 }}
+                className="bg-red-300   w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
+              >
+                <p>Please check your inputs!</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </form>
       </div>
     </>
