@@ -79,7 +79,7 @@ const Layout = (props: layoutProps) => {
                   About
                 </motion.li>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
                 <motion.li
                   initial={{ y: -1000 }}
                   animate={{ y: 0, transition: { delay: 0.7 } }}

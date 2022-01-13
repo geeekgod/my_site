@@ -5,6 +5,8 @@ const Footer = () => {
   const { theme } = useTheme();
   const [themeEnable, setThemeEnable] = useState(false);
 
+  const date = new Date();
+
   useEffect(() => {
     setThemeEnable(true);
   }, []);
@@ -91,7 +93,7 @@ const Footer = () => {
           <p className="mx-1">Made with &#x1f49d;</p>
           <div className="mx-1">•</div>
           {/*  */}
-          <p className="mx-1">© 2022</p>
+          <p className="mx-1">{`© ${date.getFullYear()}`}</p>
           <div className="mx-1">•</div>
           <p className="mx-1 ">Rishabh Singh</p>
         </div>

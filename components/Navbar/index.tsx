@@ -176,7 +176,7 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
               <Link href="/about">
                 <li className="deskTopNavItem">About</li>
               </Link>
-              <Link href="/">
+              <Link href="/contact">
                 <li className="deskTopNavItem">Contact</li>
               </Link>
             </ul>

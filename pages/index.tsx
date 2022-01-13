@@ -71,8 +71,8 @@ const Home: NextPage = () => {
               onClick={() => {
                 setTimeout(() => router.push("/about"), 150);
               }}
-              whileHover={{ scale: 1.07 }}
-              className="bg-[#5672F0] text-white py-2 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA] selection:cursor-not-allowed "
+              whileHover={{ scale: 1.07, backgroundColor: "#2F52EE" }}
+              className="primaryBtn"
             >
               Read More
             </motion.button>
