@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -65,6 +68,9 @@ const Home: NextPage = () => {
             className="my-4 mx-5"
           >
             <motion.button
+              onClick={() => {
+                setTimeout(() => router.push("/about"), 150);
+              }}
               whileHover={{ scale: 1.07 }}
               className="bg-[#5672F0] text-white py-2 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA] selection:cursor-not-allowed "
             >

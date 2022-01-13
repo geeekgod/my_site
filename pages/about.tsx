@@ -68,7 +68,7 @@ const About = () => {
               I started programming back when I was at 14 , trying to use basic
               programming languages & develop basic games & flex among my
               friends, but eventually,
-              <br /> this passion evolved into today what I'm.
+              <br /> this passion evolved into today what I&apos;m.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 150 }}
@@ -76,7 +76,7 @@ const About = () => {
               transition={{ type: "spring", duration: 0.6, delay: 1.3 }}
               className="text-md my-3 text-gray-600 dark:text-slate-400"
             >
-              Currently pursuing my bachelor's in Computer Engineering & working
+              Currently pursuing my bachelor&apos;s in Computer Engineering & working
               as a Web Developer at{" "}
               <a
                 className="dark:text-[#7C92F4] text-[#4262F0] font-semibold border-b-2 dark:border-[#7C92F4] border-[#4262F0] "
@@ -87,7 +87,7 @@ const About = () => {
                 SSingularity Tech
               </a>
               .<br />I love creating things that revolve around web, be it
-              Websites, Web Apps, Mobile Apps. I've spent 2 years working on web
+              Websites, Web Apps, Mobile Apps. I&apos;ve spent 2 years working on web
               technologies & make my work pixel perfect with every new project I
               work on.
             </motion.p>
