@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -11,30 +12,57 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="flex mx-10 flex-col  py-10 px-6 rounded-md mt-4 mb-6 bg-slate-100 shadow-sm dark:bg-gray-800 slg:mx-12 slg:flex-row  slg:shadow-none slg:dark:bg-transparent slg:bg-transparent">
-        <div className="imgcontainer flex items-center justify-center slg:w-2/4">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="imgcontainer flex items-center justify-center slg:w-2/4"
+        >
           <img src={"/assets/Development-cuate.png"} className="w-full" />
-        </div>
+        </motion.div>
         <div className="flex flex-col justify-center slg:w-2/4">
-          <div className="text-primary font-bold text-3xl my-2">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="text-primary font-bold text-3xl my-2"
+          >
             {"<Rishabh>"}
-          </div>
-          <div className="font-bold text-3xl my-2 ml-5 dark:text-white">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="font-bold text-3xl my-2 ml-5 dark:text-white"
+          >
             {"Full-Stack Developer"}
-          </div>
-          <div className="text-primary font-bold text-3xl my-2">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="text-primary font-bold text-3xl my-2"
+          >
             {"</Rishabh>"}
-          </div>
-          <div className="font-medium text-md my-2 ml-5 dark:text-white">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
+            className="font-medium text-md my-2 ml-5 dark:text-white"
+          >
             {"Developing quality software to"}
             <br />
             {"help businesses leverage their products."}
-          </div>
+          </motion.div>
 
-          <div className="my-4 mx-5">
-            <button className="bg-[#5672F0] text-white py-2 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA] selection:cursor-not-allowed ">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="my-4 mx-5"
+          >
+            <motion.button
+              whileHover={{ scale: 1.07 }}
+              className="bg-[#5672F0] text-white py-2 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA] selection:cursor-not-allowed "
+            >
               Read More
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
       </div>
     </div>
