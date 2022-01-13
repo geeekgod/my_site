@@ -3,17 +3,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { memo, useEffect, useState } from "react";
 
+interface navBarProps {
+  menu: boolean;
+  setMenu: Function;
+}
+
 const { motion, AnimatePresence } = require("framer-motion");
-const Navbar: React.FC = () => {
+const Navbar = ({ menu, setMenu }: navBarProps) => {
   const { systemTheme, theme, setTheme } = useTheme();
 
   const [themeEnable, setThemeEnable] = useState(false);
   const [audio, setAudio]: any = useState<any>();
 
   const router = useRouter();
-
-  const [menu, setMenu] = useState(false);
-
   useEffect(() => {
     setMenu(false);
   }, [router]);
@@ -126,124 +128,72 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div>
-      <nav className="flex justify-around py-6">
-        <motion.div
-          initial={{ x: -1000 }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 90 }}
-          className="flex items-center"
-        >
-          <svg
-            className="w-12 dark:text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+    <>
+      <div>
+        <nav className="flex justify-around py-6">
+          <motion.div
+            initial={{ x: -1000 }}
+            animate={{ x: 0 }}
+            transition={{ type: "spring", stiffness: 90 }}
+            className="flex items-center"
           >
-            <motion.path
-              initial={{ pathLength: 0 }}
-              animate={{
-                pathLength: 1,
-                transition: { delay: 1.6, duration: 1.2 },
-              }}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            ></motion.path>
-          </svg>
-          <h3 className="text-2xl font-semibold ml-2 dark:text-white">
-            Rishabh Singh
-          </h3>
-        </motion.div>
-        <motion.div
-          initial={{ y: -1000, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 90 }}
-          className="flex"
-        >
-          <ul className="hidden slg:flex items-center font-medium dark:text-white">
-            <Link href="/">
-              <li className="deskTopNavItem">Home</li>
-            </Link>
-            <Link href="/">
-              <li className="deskTopNavItem">Projects</li>
-            </Link>
-            <Link href="/about">
-              <li className="deskTopNavItem">About</li>
-            </Link>
-            <Link href="/">
-              <li className="deskTopNavItem">Contact</li>
-            </Link>
-          </ul>
-          <div className="flex items-center z-50 mx-5 cursor-pointer selection:cursor-not-allowed">
-            {themeSetRenderer()}
-          </div>
-
-          <div
-            className="menu-item flex items-center z-50 slg:hidden"
-            onClick={() => setMenu(!menu)}
-          >
-            {menuBtbRenderer()}
-          </div>
-        </motion.div>
-        <AnimatePresence>
-          {menu ? (
-            <motion.ul
-              initial={{ opacity: 0, x: -1000 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -1000 }}
-              transition={{ duration: 0.5 }}
-              className={
-                "flex flex-col py-24 absolute z-40 h-screen w-screen bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
-              }
+            <svg
+              className="w-12 dark:text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
+              <motion.path
+                initial={{ pathLength: 0 }}
+                animate={{
+                  pathLength: 1,
+                  transition: { delay: 1.6, duration: 1.2 },
+                }}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></motion.path>
+            </svg>
+            <h3 className="text-2xl font-semibold ml-2 dark:text-white">
+              Rishabh Singh
+            </h3>
+          </motion.div>
+          <motion.div
+            initial={{ y: -1000, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 90 }}
+            className="flex"
+          >
+            <ul className="hidden slg:flex items-center font-medium dark:text-white">
               <Link href="/">
-                <motion.li
-                  initial={{ y: -1000 }}
-                  animate={{ y: 0, transition: { delay: 0.4 } }}
-                  transition={{ duration: 0.5 }}
-                  className="mobileNavItem"
-                >
-                  Home
-                </motion.li>
+                <li className="deskTopNavItem">Home</li>
               </Link>
               <Link href="/">
-                <motion.li
-                  initial={{ y: -1000 }}
-                  animate={{ y: 0, transition: { delay: 0.5 } }}
-                  transition={{ duration: 0.5 }}
-                  className="mobileNavItem"
-                >
-                  Projects
-                </motion.li>
+                <li className="deskTopNavItem">Projects</li>
               </Link>
               <Link href="/about">
-                <motion.li
-                  initial={{ y: -1000 }}
-                  animate={{ y: 0, transition: { delay: 0.6 } }}
-                  transition={{ duration: 0.5 }}
-                  className="mobileNavItem"
-                >
-                  About
-                </motion.li>
+                <li className="deskTopNavItem">About</li>
               </Link>
               <Link href="/">
-                <motion.li
-                  initial={{ y: -1000 }}
-                  animate={{ y: 0, transition: { delay: 0.7 } }}
-                  transition={{ duration: 0.5 }}
-                  className="mobileNavItem"
-                >
-                  Contact
-                </motion.li>
+                <li className="deskTopNavItem">Contact</li>
               </Link>
-            </motion.ul>
-          ) : null}
-        </AnimatePresence>
-      </nav>
-    </div>
+            </ul>
+            <div className="flex items-center z-50 mx-5 cursor-pointer selection:cursor-not-allowed">
+              {themeSetRenderer()}
+            </div>
+
+            <div
+              className="menu-item flex items-center z-50 slg:hidden"
+              onClick={() => setMenu(!menu)}
+            >
+              {menuBtbRenderer()}
+            </div>
+          </motion.div>
+        </nav>
+      </div>
+    </>
   );
 };
 
