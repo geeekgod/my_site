@@ -59,16 +59,6 @@ const Layout = (props: layoutProps) => {
                   Home
                 </motion.li>
               </Link>
-              <Link href="/">
-                <motion.li
-                  initial={{ y: -1000 }}
-                  animate={{ y: 0, transition: { delay: 0.5 } }}
-                  transition={{ duration: 0.5 }}
-                  className="mobileNavItem"
-                >
-                  Projects
-                </motion.li>
-              </Link>
               <Link href="/about">
                 <motion.li
                   initial={{ y: -1000 }}

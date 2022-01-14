@@ -31,6 +31,7 @@ const About = () => {
             <motion.img
               whileHover={{ scale: 1.07, transition: { type: "spring" } }}
               src={"/assets/myimage.png"}
+              alt="Rishabh Singh Image"
               className="w-56 slg:w-72 cursor-pointer border-[6px] rounded-full bg-[#4262F0] border-[#4262F0] dark:bg-[#7C92F4] dark:border-[#7C92F4]"
             />
           </motion.div>

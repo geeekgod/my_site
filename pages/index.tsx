@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           transition={{ delay: 0.5 }}
           className="imgcontainer flex items-center justify-center slg:w-2/4"
         >
-          <img src={"/assets/Development-cuate.png"} className="w-full" />
+          <img src={"/assets/home.png"} alt="Home Bg" className="w-full" />
         </motion.div>
         <div className="flex flex-col justify-center slg:w-2/4">
           <motion.div

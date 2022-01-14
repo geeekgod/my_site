@@ -138,7 +138,7 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
             className="flex items-center"
           >
             <svg
-              className="w-12 dark:text-white"
+              className="w-9 slg:w-12 dark:text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -156,7 +156,7 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
                 d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
               ></motion.path>
             </svg>
-            <h3 className="text-2xl font-semibold ml-2 dark:text-white">
+            <h3 className="text-xl slg:text-2xl font-semibold ml-2 dark:text-white">
               Rishabh Singh
             </h3>
           </motion.div>
@@ -169,9 +169,6 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
             <ul className="hidden slg:flex items-center font-medium dark:text-white">
               <Link href="/">
                 <li className="deskTopNavItem">Home</li>
-              </Link>
-              <Link href="/">
-                <li className="deskTopNavItem">Projects</li>
               </Link>
               <Link href="/about">
                 <li className="deskTopNavItem">About</li>

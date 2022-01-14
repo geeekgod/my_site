@@ -8,13 +8,13 @@ module.exports = {
     ],
   },
   theme: {
-    screens: {
-      slg: "968px",
-    },
     typography: (theme) => ({}),
     extend: {
       colors: {
         primary: "#4361EE",
+      },
+      screens: {
+        slg: "968px",
       },
     },
   },
