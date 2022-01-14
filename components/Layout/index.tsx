@@ -25,8 +25,49 @@ const Layout = (props: layoutProps) => {
   return (
     <ThemeProvider enableSystem={true} attribute={"class"}>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Rishabh Singh</title>
         <link rel="icon" href="/assets/myimage.png" />
         <link rel="apple-touch-icon" href="/assets/myimage.png" />
+        <meta
+          name="description"
+          content="Im a passionate Full-Stack developer. I develop quality software to help businesses to leverage their products."
+        />
+        <meta
+          name="keywords"
+          content="Rishabh, Singh, Rishabh Singh,Fullstack,Full-Stack,Full-Stack Developer, Frontend, Developer, Frontend Developer, Web, website, Website Developer, Web Developer, thefrontendrish, rishabhsingh-dev.me"
+        />
+        <meta name="”robots”" content="index, follow" />
+
+        <link rel="canonical" href="https://rishabhsingh-dev.me/" />
+
+        <meta property="og:type" content="game web app" />
+        <meta
+          property="og:title"
+          content="Rishabh Singh, Full-Stack Developer personal website."
+        />
+        <meta
+          property="og:description"
+          content="Im a passionate Full-Stack developer. I develop quality software to help businesses to leverage their products."
+        />
+        <meta property="og:url" content="https://rishabhsingh-dev.me/" />
+        <meta property="og:site_name" content="Rishabh Singh" />
+        <meta property="og:image" content="/assets/myimage.png" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+
+        {/* Gtag Scripts */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-VT4526C2VG"
+        ></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VT4526C2VG');`}
+        </script>
       </Head>
       <div
         className={

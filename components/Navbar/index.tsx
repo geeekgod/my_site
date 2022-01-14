@@ -131,35 +131,37 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
     <>
       <div>
         <nav className="flex justify-around py-6">
-          <motion.div
-            initial={{ x: -1000 }}
-            animate={{ x: 0 }}
-            transition={{ type: "spring", stiffness: 90 }}
-            className="flex items-center"
-          >
-            <svg
-              className="w-9 slg:w-12 dark:text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+          <Link href="/">
+            <motion.div
+              initial={{ x: -1000 }}
+              animate={{ x: 0 }}
+              transition={{ type: "spring", stiffness: 90 }}
+              className="flex items-center cursor-pointer"
             >
-              <motion.path
-                initial={{ pathLength: 0 }}
-                animate={{
-                  pathLength: 1,
-                  transition: { delay: 1.6, duration: 1.2 },
-                }}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              ></motion.path>
-            </svg>
-            <h3 className="text-xl slg:text-2xl font-semibold ml-2 dark:text-white">
-              Rishabh Singh
-            </h3>
-          </motion.div>
+              <svg
+                className="w-9 slg:w-12 dark:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <motion.path
+                  initial={{ pathLength: 0 }}
+                  animate={{
+                    pathLength: 1,
+                    transition: { delay: 1.6, duration: 1.2 },
+                  }}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></motion.path>
+              </svg>
+              <h3 className="text-xl slg:text-2xl font-semibold ml-2 dark:text-white">
+                Rishabh Singh
+              </h3>
+            </motion.div>
+          </Link>
           <motion.div
             initial={{ y: -1000, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
