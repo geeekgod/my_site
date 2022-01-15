@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="mb-0 mt-auto">
       <div className="py-4">
         <motion.div
-          initial={{ opacity: 0, y: -1000 }}
+          initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", delay: 0.6, duration: 1 }}
           className="flex justify-center py-4"

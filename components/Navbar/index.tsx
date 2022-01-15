@@ -133,7 +133,7 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
         <nav className="flex justify-around py-6">
           <Link href="/">
             <motion.div
-              initial={{ x: -1000 }}
+              initial={{ x: -400 }}
               animate={{ x: 0 }}
               transition={{ type: "spring", stiffness: 90 }}
               className="flex items-center cursor-pointer"
@@ -163,7 +163,7 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
             </motion.div>
           </Link>
           <motion.div
-            initial={{ y: -1000, opacity: 0 }}
+            initial={{ y: -400, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 90 }}
             className="flex"

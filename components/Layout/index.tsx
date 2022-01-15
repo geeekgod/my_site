@@ -63,10 +63,9 @@ const Layout = (props: layoutProps) => {
         ></script>
         <script>
           {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VT4526C2VG');`}
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VT4526C2VG');`}
         </script>
       </Head>
       <div
@@ -80,9 +79,9 @@ const Layout = (props: layoutProps) => {
         <AnimatePresence>
           {menu ? (
             <motion.ul
-              initial={{ opacity: 0, x: -1000 }}
+              initial={{ opacity: 0, x: -800 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -1000 }}
+              exit={{ opacity: 0, x: -800 }}
               transition={{ duration: 0.5 }}
               className={
                 menu
@@ -92,7 +91,7 @@ const Layout = (props: layoutProps) => {
             >
               <Link href="/">
                 <motion.li
-                  initial={{ y: -1000 }}
+                  initial={{ y: -300 }}
                   animate={{ y: 0, transition: { delay: 0.4 } }}
                   transition={{ duration: 0.5 }}
                   className="mobileNavItem"
@@ -102,7 +101,7 @@ const Layout = (props: layoutProps) => {
               </Link>
               <Link href="/about">
                 <motion.li
-                  initial={{ y: -1000 }}
+                  initial={{ y: -300 }}
                   animate={{ y: 0, transition: { delay: 0.6 } }}
                   transition={{ duration: 0.5 }}
                   className="mobileNavItem"
@@ -112,7 +111,7 @@ const Layout = (props: layoutProps) => {
               </Link>
               <Link href="/contact">
                 <motion.li
-                  initial={{ y: -1000 }}
+                  initial={{ y: -300 }}
                   animate={{ y: 0, transition: { delay: 0.7 } }}
                   transition={{ duration: 0.5 }}
                   className="mobileNavItem"
