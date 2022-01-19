@@ -4,6 +4,17 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import * as EmailValidator from "email-validator";
 import axios from "axios";
 
+const moveUpVariants = {
+  initial: { opacity: 0, y: 100 },
+  animate: { opacity: 1, y: 0 },
+};
+
+const alertVariants = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 100 },
+};
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -107,12 +118,10 @@ const Contact = () => {
           className="flex mx-10 flex-col items-center justify-center py-10 px-6  mt-4 mb-6  slg:mx-12"
         >
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 0.6, delay: 0.6 },
-            }}
+            variants={moveUpVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ type: "spring", duration: 0.6, delay: 0.6 }}
             className="contactInpCont"
           >
             <label className="contactLabel">Name</label>
@@ -127,12 +136,10 @@ const Contact = () => {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 0.6, delay: 0.8 },
-            }}
+            variants={moveUpVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ type: "spring", duration: 0.6, delay: 0.8 }}
             className="contactInpCont"
           >
             <label className="contactLabel">Email</label>
@@ -146,12 +153,10 @@ const Contact = () => {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 0.6, delay: 1 },
-            }}
+            variants={moveUpVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ type: "spring", duration: 0.6, delay: 1 }}
             className="contactInpCont"
           >
             <label className="contactLabel">Subject</label>
@@ -165,12 +170,10 @@ const Contact = () => {
             />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: { type: "spring", duration: 0.6, delay: 1.2 },
-            }}
+            variants={moveUpVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ type: "spring", duration: 0.6, delay: 1.2 }}
             className="contactInpCont"
           >
             <label className="contactLabel">Message</label>
@@ -194,9 +197,10 @@ const Contact = () => {
           <AnimatePresence>
             {msgSent && (
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 100 }}
+                variants={alertVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
                 className="bg-green-300 w-[300px] text-center my-2 text-green-800 py-2 px-12 rounded-lg"
               >
                 <p>Message Sent!</p>
@@ -204,9 +208,10 @@ const Contact = () => {
             )}
             {msgSentErr && (
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 100 }}
+                variants={alertVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
                 className="bg-red-300   w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
               >
                 <p>Please try again later!</p>
@@ -214,9 +219,10 @@ const Contact = () => {
             )}
             {err && (
               <motion.div
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 100 }}
+                variants={alertVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
                 className="bg-red-300   w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
               >
                 <p>Please check your inputs!</p>

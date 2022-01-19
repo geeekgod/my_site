@@ -11,18 +11,40 @@ const Footer = () => {
   useEffect(() => {
     setThemeEnable(true);
   }, []);
+
+  const socialDivVariants = {
+    initial: { opacity: 0, y: 100 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", delay: 0.6, duration: 1 },
+    },
+  };
+
+  const socialLinksVariants = {
+    hover: { scale: 1.26, transition: { type: "spring", stiffness: 200 } },
+  };
+
+  const footerTxtVariants = {
+    initial: { opacity: 0, y: 100 },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <footer className="mb-0 mt-auto">
       <div className="py-4">
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", delay: 0.6, duration: 1 }}
+          variants={socialDivVariants}
+          initial="initial"
+          animate="animate"
           className="flex justify-center py-4"
         >
           <motion.a
-            whileHover={{ scale: 1.26 }}
-            transition={{ type: "spring", stiffness: 200 }}
+            variants={socialLinksVariants}
+            whileHover="hover"
             target="_blank"
             rel="noreferrer"
             href="mailto: ris8645208@gmail.com"
@@ -41,8 +63,8 @@ const Footer = () => {
           </motion.a>
 
           <motion.a
-            whileHover={{ scale: 1.26 }}
-            transition={{ type: "spring", stiffness: 200 }}
+            variants={socialLinksVariants}
+            whileHover="hover"
             target="_blank"
             rel="noreferrer"
             href="https://github.com/thisisrishabh22/"
@@ -64,8 +86,8 @@ const Footer = () => {
           </motion.a>
 
           <motion.a
-            whileHover={{ scale: 1.26 }}
-            transition={{ type: "spring", stiffness: 200 }}
+            variants={socialLinksVariants}
+            whileHover="hover"
             target="_blank"
             rel="noreferrer"
             href="https://instagram.com/thefrontendrish"
@@ -85,8 +107,8 @@ const Footer = () => {
           </motion.a>
 
           <motion.a
-            whileHover={{ scale: 1.26 }}
-            transition={{ type: "spring", stiffness: 200 }}
+            variants={socialLinksVariants}
+            whileHover="hover"
             target="_blank"
             rel="noreferrer"
             href="https://www.linkedin.com/in/rishabhh-singh/"
@@ -105,16 +127,18 @@ const Footer = () => {
         </motion.div>
         <div className="flex justify-center py-1 pb-3 dark:text-white cursor-pointer">
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={footerTxtVariants}
+            initial="initial"
+            animate="animate"
             transition={{ type: "spring", delay: 0.6, duration: 1 }}
             className="mx-1"
           >
             Made with &#x1f49d;
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={footerTxtVariants}
+            initial="initial"
+            animate="animate"
             transition={{ type: "spring", delay: 0.8, duration: 1 }}
             className="mx-1"
           >
@@ -122,22 +146,25 @@ const Footer = () => {
           </motion.div>
           {/*  */}
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={footerTxtVariants}
+            initial="initial"
+            animate="animate"
             transition={{ type: "spring", delay: 0.8, duration: 1 }}
             className="mx-1"
           >{`© ${date.getFullYear()}`}</motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={footerTxtVariants}
+            initial="initial"
+            animate="animate"
             transition={{ type: "spring", delay: 1, duration: 1 }}
             className="mx-1"
           >
             •
           </motion.div>
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={footerTxtVariants}
+            initial="initial"
+            animate="animate"
             transition={{ type: "spring", delay: 1.2, duration: 1 }}
             className="mx-1 "
           >
