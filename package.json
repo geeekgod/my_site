@@ -1,5 +1,13 @@
 {
-  "name": "new-portfolio",
+  "name": "rishabhsingh-dev.me",
+  "author": {
+    "name": "Rishabh Singh",
+    "email": "ris8645208@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/thisisrishabh22/rishabhsingh-dev.me"
+  },
+  "homepage": "https://rishabhsingh-dev.me/",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3005",
