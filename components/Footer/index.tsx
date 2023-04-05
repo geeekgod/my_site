@@ -111,7 +111,7 @@ const Footer = () => {
             whileHover="hover"
             target="_blank"
             rel="noreferrer"
-            href="https://www.linkedin.com/in/rishabhh-singh/"
+            href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=rishabhh-singh"
           >
             <svg
               className="w-8 mx-2"

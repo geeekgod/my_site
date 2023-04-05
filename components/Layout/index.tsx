@@ -27,8 +27,8 @@ const Layout = (props: layoutProps) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Rishabh Singh</title>
-        <link rel="icon" href="/assets/myimage.png" />
-        <link rel="apple-touch-icon" href="/assets/myimage.png" />
+        <link rel="icon" href="/assets/my_pic.png" />
+        <link rel="apple-touch-icon" href="/assets/my_pic.png" />
         <meta
           name="description"
           content="Im a passionate Full-Stack developer. I develop quality software to help businesses to leverage their products."
@@ -52,7 +52,7 @@ const Layout = (props: layoutProps) => {
         />
         <meta property="og:url" content="https://rishabhsingh-dev.me/" />
         <meta property="og:site_name" content="Rishabh Singh" />
-        <meta property="og:image" content="/assets/myimage.png" />
+        <meta property="og:image" content="/assets/my_pic.png" />
         <meta property="og:image:width" content="500" />
         <meta property="og:image:height" content="500" />
 
