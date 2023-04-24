@@ -31,7 +31,7 @@ const CustomNotFound = () => {
             }}
             className=" text-xl md:text-2xl font-semibold mt-7 pb-4 "
           >
-            The page you're looking for can&apos;t be found!
+            The page you&apos;re looking for can&apos;t be found!
           </motion.h1>
         </div>
       </div>
