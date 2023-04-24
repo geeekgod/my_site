@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
@@ -21,9 +22,9 @@ const Home: NextPage = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="imgcontainer flex items-center justify-center slg:w-2/4"
+          className="img container flex items-center justify-center slg:w-2/4"
         >
-          <img src={"/assets/home.png"} alt="Home Bg" className="w-full" />
+          <Image src={"/assets/home.png"} alt="Home Bg" className="w-full" width={1024} height={1024} />
         </motion.div>
         <div className="flex flex-col justify-center slg:w-2/4">
           <motion.div
