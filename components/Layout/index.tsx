@@ -55,18 +55,6 @@ const Layout = (props: layoutProps) => {
         <meta property="og:image" content="/assets/my_pic.png" />
         <meta property="og:image:width" content="500" />
         <meta property="og:image:height" content="500" />
-
-        {/* Gtag Scripts */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-VT4526C2VG"
-        ></script>
-        <script>
-          {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-VT4526C2VG');`}
-        </script>
       </Head>
       <div
         className={
@@ -89,7 +77,7 @@ const Layout = (props: layoutProps) => {
                   : ""
               }
             >
-              <Link href="/">
+              <Link href="/" passHref>
                 <motion.li
                   initial={{ y: -300 }}
                   animate={{ y: 0, transition: { delay: 0.4 } }}
@@ -99,7 +87,7 @@ const Layout = (props: layoutProps) => {
                   Home
                 </motion.li>
               </Link>
-              <Link href="/about">
+              <Link href="/about" passHref>
                 <motion.li
                   initial={{ y: -300 }}
                   animate={{ y: 0, transition: { delay: 0.6 } }}
@@ -109,7 +97,7 @@ const Layout = (props: layoutProps) => {
                   About
                 </motion.li>
               </Link>
-              <Link href="/contact">
+              <Link href="/contact" passHref>
                 <motion.li
                   initial={{ y: -300 }}
                   animate={{ y: 0, transition: { delay: 0.7 } }}
