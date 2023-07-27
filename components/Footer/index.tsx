@@ -47,7 +47,7 @@ const Footer = () => {
             whileHover="hover"
             target="_blank"
             rel="noreferrer"
-            href="mailto: ris8645208@gmail.com"
+            href="mailto: rishabh@geeekgod.in"
           >
             <svg
               className="w-8 mx-2"

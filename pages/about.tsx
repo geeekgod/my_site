@@ -50,7 +50,7 @@ const About = () => {
               transition={{ type: "spring", delay: 0.8 }}
               className="text-xl my-1"
             >
-              Full-Stack Developer
+              Software Engineer
             </motion.h3>
             <motion.h3
               initial={{ opacity: 0, x: -70 }}
@@ -78,7 +78,7 @@ const About = () => {
               className="text-md my-3 text-gray-600 dark:text-slate-400"
             >
               Currently pursuing my bachelor&apos;s in Computer Engineering & working
-              as a Web Developer at{" "}
+              as a Software Engineer at{" "}
               <a
                 className="dark:text-[#7C92F4] text-[#4262F0] font-semibold border-b-2 dark:border-[#7C92F4] border-[#4262F0] "
                 href="https://ssingularity.co.in/"

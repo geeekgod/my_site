@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             transition={{ delay: 0.8, type: "spring", duration: 0.6 }}
             className="font-bold text-3xl my-2 ml-5 dark:text-white"
           >
-            {"Full-Stack Developer"}
+            {"Software Engineer"}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
