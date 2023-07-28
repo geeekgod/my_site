@@ -31,26 +31,26 @@ const Layout = (props: layoutProps) => {
         <link rel="apple-touch-icon" href="/assets/my_pic.png" />
         <meta
           name="description"
-          content="Im a passionate Full-Stack developer. I develop quality software to help businesses to leverage their products."
+          content="Im a passionate Software Engineer. I develop quality software to help businesses to leverage their products."
         />
         <meta
           name="keywords"
-          content="Rishabh, Singh, Rishabh Singh,Fullstack,Full-Stack,Full-Stack Developer, Frontend, Developer, Frontend Developer, Web, website, Website Developer, Web Developer, thefrontendrish, rishabhsingh-dev.me"
+          content="Rishabh, Singh, Rishabh Singh Software Engineer, Software Engineer, Rishabh Singh Fullstack developer, Rishabh Singh Software Engineer Mumbai, Rishabh Singh Fullstack developer Mumbai, Software Engineer in Mumbai, Fullstack,Full-Stack,Full-Stack Developer, Frontend, Developer, Frontend Developer, Web, website, Website Developer, Web Developer, thefrontendrish, geeekgod, thisisgeeekgod, Rishabh Singh geeekgod, geeekgod Software Engineer, geeekgod.in, wwww.geeekgod.in"
         />
         <meta name="”robots”" content="index, follow" />
 
-        <link rel="canonical" href="https://rishabhsingh-dev.me/" />
+        <link rel="canonical" href="https://geeekgod.in/" />
 
         <meta property="og:type" content="game web app" />
         <meta
           property="og:title"
-          content="Rishabh Singh, Full-Stack Developer personal website."
+          content="Rishabh Singh, Software Engineer personal website."
         />
         <meta
           property="og:description"
-          content="Im a passionate Full-Stack developer. I develop quality software to help businesses to leverage their products."
+          content="Im a passionate Software Engineer. I develop quality software to help businesses to leverage their products."
         />
-        <meta property="og:url" content="https://rishabhsingh-dev.me/" />
+        <meta property="og:url" content="https://geeekgod.in/" />
         <meta property="og:site_name" content="Rishabh Singh" />
         <meta property="og:image" content="/assets/my_pic.png" />
         <meta property="og:image:width" content="500" />
