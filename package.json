@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.15",
     "axios": "^1.4.0",
     "email-validator": "^2.0.4",
     "framer-motion": "^10.16.4",
