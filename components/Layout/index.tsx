@@ -52,7 +52,7 @@ const Layout = (props: layoutProps) => {
         />
         <meta property="og:url" content="https://geeekgod.in/" />
         <meta property="og:site_name" content="Rishabh Singh" />
-        <meta property="og:image" content="/assets/my_pic.png" />
+        <meta property="og:image" content="https://www.geeekgod.in/assets/my_pic.png" />
         <meta property="og:image:width" content="500" />
         <meta property="og:image:height" content="500" />
       </Head>
