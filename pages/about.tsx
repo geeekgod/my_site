@@ -66,10 +66,9 @@ const About = () => {
               transition={{ type: "spring", duration: 0.6, delay: 0.9 }}
               className="text-md my-3 text-gray-600 dark:text-slate-400"
             >
-              I started programming back when I was at 14 , trying to use basic
-              programming languages & develop basic games & flex among my
-              friends, but eventually,
-              <br /> this passion evolved into today what I&apos;m.
+              I started programming when I was just 14, tinkering with basic
+              languages and creating simple games. That initial spark grew into
+              a full-blown passion that drives me today.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 150 }}
@@ -77,8 +76,8 @@ const About = () => {
               transition={{ type: "spring", duration: 0.6, delay: 1.3 }}
               className="text-md my-3 text-gray-600 dark:text-slate-400"
             >
-              Currently pursuing my bachelor&apos;s in Computer Engineering & working
-              as a Software Engineer at{" "}
+              I&apos;m currently pursuing a Bachelor&apos;s in Computer
+              Engineering while also serving as a Founding Engineer at{" "}
               <a
                 className="dark:text-[#7C92F4] text-[#4262F0] font-semibold border-b-2 dark:border-[#7C92F4] border-[#4262F0] "
                 href="https://ssingularity.co.in/"
@@ -87,10 +86,13 @@ const About = () => {
               >
                 SSingularity Tech
               </a>
-              .<br />I love creating things that revolve around web, be it
-              Websites, Web Apps, Mobile Apps. I&apos;ve spent 2 years working on web
-              technologies & make my work pixel perfect with every new project I
-              work on.
+              .<br />
+              My passion lies in sculpting digital experiences, spanning from
+              crafting innovative apps and immersive websites to engineering
+              robust systems. With three years of experience and collaborating with
+              esteemed clients including MNCs, Big Four firms, and startups, I
+              ensure that every project I undertake is honed to perfection,
+              reflecting my unwavering dedication to excellence.
             </motion.p>
           </div>
         </div>
