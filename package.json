@@ -16,7 +16,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.7",
     "email-validator": "^2.0.4",
