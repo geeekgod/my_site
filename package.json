@@ -1,13 +1,13 @@
 {
-  "name": "rishabhsingh-dev.me",
+  "name": "my_site",
   "author": {
     "name": "Rishabh Singh",
     "email": "ris8645208@gmail.com"
   },
   "repository": {
-    "url": "https://github.com/thisisrishabh22/rishabhsingh-dev.me"
+    "url": "https://github.com/geeekgod/my_site"
   },
-  "homepage": "https://rishabhsingh-dev.me/",
+  "homepage": "https://geeekgod.in/",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3005",

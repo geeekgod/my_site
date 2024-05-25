@@ -67,7 +67,7 @@ const Footer = () => {
             whileHover="hover"
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/thisisrishabh22/"
+            href="https://github.com/geeekgod/"
           >
             <svg
               className="w-8 mx-2"

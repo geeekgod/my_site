@@ -1,12 +1,9 @@
 module.exports = {
   darkMode: "class",
-  purge: {
-    enabled: true,
-    content: [
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
-    ],
-  },
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     typography: (theme) => ({}),
     extend: {
@@ -14,6 +11,7 @@ module.exports = {
         primary: "#4361EE",
       },
       screens: {
+        // breakpoint at 968px - slg
         slg: "968px",
       },
     },
