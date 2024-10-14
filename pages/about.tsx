@@ -76,8 +76,7 @@ const About = () => {
               transition={{ type: "spring", duration: 0.6, delay: 1.3 }}
               className="text-md my-3 text-gray-600 dark:text-slate-400"
             >
-              Currently, I&apos;m pursuing my Bachelor&apos;s in Computer
-              Engineering while also working as a Founding Engineer at{" "}
+              Currently, working as a Founding Engineer at{" "}
               <a
                 className="dark:text-[#7C92F4] text-[#4262F0] font-semibold border-b-2 dark:border-[#7C92F4] border-[#4262F0] "
                 href="https://ssingularity.co.in/"
