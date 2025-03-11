@@ -10,9 +10,9 @@
   "homepage": "https://geeekgod.in/",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3005",
+    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start -p 3005",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
