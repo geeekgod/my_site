@@ -1,30 +1,37 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React, { memo, useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-interface navBarProps {
-  menu: boolean;
-  setMenu: Function;
-}
-
-const { motion, AnimatePresence } = require("framer-motion");
-const Navbar = ({ menu, setMenu }: navBarProps) => {
+const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-
+  const [menu, setMenu] = useState(false);
   const [themeEnable, setThemeEnable] = useState(false);
   const [audio, setAudio]: any = useState<any>();
 
-  const router = useRouter();
+  const pathname = usePathname();
+
   useEffect(() => {
     setMenu(false);
-  }, [router]);
+  }, [pathname]);
 
   useEffect(() => {
     setMenu(false);
     setThemeEnable(true);
     setAudio(new Audio("/assets/click.mp3"));
   }, []);
+
+  // This ensures the body doesn't scroll when menu is open
+  useEffect(() => {
+    let body: any = document.getElementsByTagName("body");
+    body = body[0];
+    if (body.style) {
+      body.style.overflow = menu ? "hidden" : "auto";
+    }
+  }, [menu]);
 
   const menuBtbRenderer = () => {
     if (menu) {
@@ -192,6 +199,53 @@ const Navbar = ({ menu, setMenu }: navBarProps) => {
           </motion.div>
         </nav>
       </div>
+
+      <AnimatePresence>
+        {menu ? (
+          <motion.ul
+            initial={{ opacity: 0, x: -800 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -800 }}
+            transition={{ duration: 0.5 }}
+            className={
+              menu
+                ? "flex overflow-hidden flex-col py-24 absolute z-40 w-full h-screen  bg-slate-100  dark:bg-gray-900  slg:hidden items-center font-medium dark:text-white"
+                : ""
+            }
+          >
+            <Link href="/" passHref>
+              <motion.li
+                initial={{ y: -300 }}
+                animate={{ y: 0, transition: { delay: 0.4 } }}
+                transition={{ duration: 0.5 }}
+                className="mobileNavItem"
+              >
+                Home
+              </motion.li>
+            </Link>
+            <Link href="/about" passHref>
+              <motion.li
+                initial={{ y: -300 }}
+                animate={{ y: 0, transition: { delay: 0.6 } }}
+                transition={{ duration: 0.5 }}
+                className="mobileNavItem"
+              >
+                About
+              </motion.li>
+            </Link>
+            <Link href="/contact" passHref>
+              <motion.li
+                initial={{ y: -300 }}
+                animate={{ y: 0, transition: { delay: 0.7 } }}
+                transition={{ duration: 0.5 }}
+                className="mobileNavItem"
+              >
+                Contact
+              </motion.li>
+            </Link>
+          </motion.ul>
+        ) : null}
+      </AnimatePresence>
     </>
   );
 };

@@ -1,17 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-slg: 968px;
+  /* add primary color */
+  --color-primary: #4361ee;
+}
 
 html,
 body {
   font-family: "Inter", sans-serif !important;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -37,7 +41,7 @@ a {
   }
 
   .primaryBtn {
-    @apply bg-[#5672F0] text-white py-2 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA] selection:cursor-not-allowed;
+    @apply bg-blue-500 text-white py-2 px-5 rounded-full;
   }
 
   .contactInpCont {
