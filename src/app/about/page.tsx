@@ -5,7 +5,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div>
+    <div className="text-white">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -69,14 +69,14 @@ export default function About() {
             transition={{ type: "spring", duration: 0.6, delay: 1.3 }}
             className="text-md my-3 text-gray-600 dark:text-slate-400"
           >
-            Currently, working as a Founding Engineer at{" "}
+            Currently, working as a SDE 2 at{" "}
             <a
-              className="dark:text-[#7C92F4] text-[#4262F0] font-semibold border-b-2 dark:border-[#7C92F4] border-[#4262F0] "
-              href="https://ssingularity.co.in/"
+              className="text-[#7C92F4] font-semibold border-b-2 border-[#7C92F4] "
+              href="https://inkasure.com/"
               target="_blank"
               rel="noreferrer"
             >
-              SSingularity Tech
+              Inka
             </a>
             .<br />I thrive on crafting digital experiences, whether it&apos;s
             apps, websites, or systems - anything that runs on a computer. With

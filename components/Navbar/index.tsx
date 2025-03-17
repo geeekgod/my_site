@@ -39,7 +39,7 @@ const Navbar = () => {
         <svg
           className="w-10"
           fill="none"
-          stroke="currentColor"
+          stroke="#FFFFFF"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -56,7 +56,7 @@ const Navbar = () => {
         <svg
           className="w-10"
           fill="none"
-          stroke="currentColor"
+          stroke="#FFFFFF"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -68,69 +68,6 @@ const Navbar = () => {
           ></path>
         </svg>
       );
-    }
-  };
-
-  const themeSetRenderer = () => {
-    if (themeEnable) {
-      const currentTheme = theme === "system" ? systemTheme : theme;
-      if (currentTheme === "dark") {
-        return (
-          <button
-            className="bg-slate-100 p-1 rounded-lg focus:ring-4"
-            onClick={() => {
-              setTimeout(() => {
-                audio.volume = 0.1;
-                audio.play();
-                setTheme("light");
-              }, 50);
-            }}
-          >
-            <svg
-              className="w-6 h-6 text-black"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-              ></path>
-            </svg>
-          </button>
-        );
-      } else {
-        return (
-          <button
-            className="bg-slate-200 p-1 rounded-lg focus:ring-4"
-            onClick={() => {
-              setTimeout(() => {
-                audio.volume = 0.1;
-                audio.play();
-                setTheme("dark");
-              }, 50);
-            }}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              ></path>
-            </svg>
-          </button>
-        );
-      }
     }
   };
 
@@ -186,9 +123,6 @@ const Navbar = () => {
                 <li className="deskTopNavItem">Contact</li>
               </Link>
             </ul>
-            <div className="flex items-center z-50 mx-5 cursor-pointer selection:cursor-not-allowed">
-              {themeSetRenderer()}
-            </div>
 
             <div
               className="menu-item flex items-center z-50 slg:hidden"

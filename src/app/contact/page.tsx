@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <>
+    <div className="text-white">
       <Head>
         <title>Contact | Rishabh Singh</title>
         <meta
@@ -31,7 +31,7 @@ const Contact = () => {
         </div>
         <ContactForm />
       </div>
-    </>
+    </div>
   );
 };
 
