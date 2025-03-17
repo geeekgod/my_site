@@ -93,7 +93,7 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={_submit}
-      className="flex mx-10 flex-col items-center justify-center py-10 px-6  mt-4 mb-6  slg:mx-12"
+      className="flex mx-10 flex-col items-center justify-center py-10 px-6 mt-4 mb-6 slg:mx-12"
     >
       <motion.div
         variants={moveUpVariants}
@@ -168,7 +168,7 @@ export const ContactForm = () => {
       <motion.button
         whileHover={{ scale: 1.07, backgroundColor: "#2F52EE" }}
         type="submit"
-        className="bg-[#5672F0] text-white w-72 my-4 py-3 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA] selection:cursor-not-allowed"
+        className="bg-[#5672F0] text-white w-72 my-4 py-3 px-5 rounded-full focus:ring-4 focus:ring-[#C7D0FA]"
       >
         Submit
       </motion.button>
@@ -190,7 +190,7 @@ export const ContactForm = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="bg-red-300   w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
+            className="bg-red-300 w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
           >
             <p>Please try again later!</p>
           </motion.div>
@@ -201,7 +201,7 @@ export const ContactForm = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="bg-red-300   w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
+            className="bg-red-300 w-[300px] text-center my-2 text-red-800 py-2 px-12 rounded-lg"
           >
             <p>Please check your inputs!</p>
           </motion.div>

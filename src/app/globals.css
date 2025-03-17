@@ -14,6 +14,7 @@ body {
   font-family: "Inter", sans-serif !important;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 a {
@@ -31,10 +32,10 @@ a {
 
 @layer components {
   body {
-    @apply dark:bg-gray-900;
+    @apply bg-gray-900;
   }
   .deskTopNavItem {
-    @apply mx-2  cursor-pointer;
+    @apply mx-2 cursor-pointer;
   }
   .mobileNavItem {
     @apply mx-2 my-5 text-xl cursor-pointer;
@@ -48,9 +49,9 @@ a {
     @apply flex flex-col py-1 px-8;
   }
   .contactLabel {
-    @apply ml-2 font-medium text-lg;
+    @apply ml-2 font-medium text-lg text-white;
   }
   .contactInput {
-    @apply py-2 px-8 rounded-full my-2 slg:w-96 focus:ring-[3px] bg-zinc-200 ring-[#B4C0F9] dark:ring-[#8E9FF6]  dark:bg-slate-600 outline-none;
+    @apply py-2 px-8 rounded-full my-2 slg:w-96 focus:ring-[3px] bg-slate-600 ring-[#8E9FF6] outline-none text-white;
   }
 }

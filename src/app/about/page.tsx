@@ -11,7 +11,7 @@ export default function About() {
         animate={{ opacity: 1, scale: 1 }}
         className="flex items-center justify-center"
       >
-        <h3 className="text-3xl font-semibold mt-7 border-black dark:border-white pb-4 border-b-4">
+        <h3 className="text-3xl font-semibold mt-7 border-white pb-4 border-b-4">
           About Me
         </h3>
       </motion.div>
@@ -25,7 +25,7 @@ export default function About() {
             whileHover={{ scale: 1.07, transition: { type: "spring" } }}
             src="/assets/my_pic.png"
             alt="Rishabh Singh"
-            className="w-56 slg:w-72 cursor-pointer border-[6px] rounded-full bg-[#4262F0] border-[#4262F0] dark:bg-[#7C92F4] dark:border-[#7C92F4]"
+            className="w-56 slg:w-72 cursor-pointer border-[6px] rounded-full bg-[#7C92F4] border-[#7C92F4]"
           />
         </motion.div>
         <div className="flex flex-col justify-center slg:w-2/4">
@@ -33,7 +33,7 @@ export default function About() {
             initial={{ opacity: 0, x: -70 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", delay: 0.6 }}
-            className="text-3xl my-2 font-semibold"
+            className="text-3xl my-2 font-semibold text-white"
           >
             Rishabh Singh
           </motion.h3>
@@ -41,7 +41,7 @@ export default function About() {
             initial={{ opacity: 0, x: -70 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", delay: 0.8 }}
-            className="text-xl my-1"
+            className="text-xl my-1 text-white"
           >
             Software Engineer
           </motion.h3>
@@ -49,7 +49,7 @@ export default function About() {
             initial={{ opacity: 0, x: -70 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", delay: 1 }}
-            className="text-lg my-1 opacity-80"
+            className="text-lg my-1 opacity-80 text-gray-300"
           >
             Based out in Mumbai, India
           </motion.h3>
@@ -57,7 +57,7 @@ export default function About() {
             initial={{ opacity: 0, y: 150 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", duration: 0.6, delay: 0.9 }}
-            className="text-md my-3 text-gray-600 dark:text-slate-400"
+            className="text-md my-3 text-slate-400"
           >
             I started programming when I was just 14, tinkering with basic
             languages and creating simple games for fun. That initial spark grew
@@ -67,11 +67,11 @@ export default function About() {
             initial={{ opacity: 0, y: 150 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", duration: 0.6, delay: 1.3 }}
-            className="text-md my-3 text-gray-600 dark:text-slate-400"
+            className="text-md my-3 text-slate-400"
           >
             Currently, working as a SDE 2 at{" "}
             <a
-              className="text-[#7C92F4] font-semibold border-b-2 border-[#7C92F4] "
+              className="text-[#7C92F4] font-semibold border-b-2 border-[#7C92F4]"
               href="https://inkasure.com/"
               target="_blank"
               rel="noreferrer"
