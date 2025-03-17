@@ -19,7 +19,7 @@
     "@tailwindcss/postcss": "^4.0.13",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
-    "axios": "^1.8.1",
+    "axios": "^1.8.2",
     "babel-plugin-react-compiler": "^19.0.0-beta-bafa41b-20250307",
     "email-validator": "^2.0.4",
     "framer-motion": "^12.4.7",
