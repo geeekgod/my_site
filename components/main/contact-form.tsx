@@ -20,7 +20,7 @@ export const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [msg, setMsg] = useState("");
-  const inputRef = useRef<any>();
+  const inputRef = useRef<any>(null);
   const [width, setWidth] = useState(0);
   const [msgSent, setMsgSent] = useState(false);
   const [msgSentErr, setMsgSentErr] = useState(false);
