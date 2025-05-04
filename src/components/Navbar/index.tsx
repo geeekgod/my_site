@@ -124,6 +124,11 @@ const Navbar = () => {
                   Contact
                 </li>
               </Link>
+              <Link href="/blogs">
+                <li className="mx-4 hover:text-primary transition-colors">
+                  Blogs
+                </li>
+              </Link>
             </ul>
 
             <div
@@ -177,6 +182,17 @@ const Navbar = () => {
                   onClick={() => setMenu(false)}
                 >
                   Contact
+                </motion.div>
+              </Link>
+              <Link href="/blogs" passHref>
+                <motion.div
+                  initial={{ y: -300 }}
+                  animate={{ y: 0, transition: { delay: 0.7 } }}
+                  transition={{ duration: 0.5 }}
+                  className="my-4 text-xl font-medium text-white hover:text-primary transition-colors"
+                  onClick={() => setMenu(false)}
+                >
+                  Blogs
                 </motion.div>
               </Link>
             </div>

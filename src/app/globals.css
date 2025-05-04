@@ -3,8 +3,13 @@
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-*: initial;
-  --breakpoint-slg: 968px;
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-slg: 60.5rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
   /* add primary color */
   --color-primary: #4361ee;
 }
