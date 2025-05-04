@@ -34,7 +34,7 @@ export const BlogView = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6 px-4 md:px-0">
         {articles.map((article, index) => (
           <motion.div
-            key={index}
+            key={`article-${article.guid}-${index}`}
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 100 }}
             className="w-full bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 relative cursor-pointer"
