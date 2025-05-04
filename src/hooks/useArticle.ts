@@ -25,7 +25,7 @@ export const useArticle = () => {
       const items = data.items as Article[];
       setArticles(items);
     } catch (err: Error | unknown) {
-      console.log(err);
+      console.error(err);
       if (err instanceof Error) {
         setError(err.message);
       } else {
