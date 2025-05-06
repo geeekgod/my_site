@@ -20,7 +20,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
     "axios": "^1.9.0",
-    "babel-plugin-react-compiler": "^19.0.0-beta-ebf51a3-20250411",
+    "babel-plugin-react-compiler": "^19.0.0-beta-714736e-20250131",
     "email-validator": "^2.0.4",
     "framer-motion": "^12.7.3",
     "next": "15.3.1",
@@ -29,7 +29,7 @@
     "postcss": "^8.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.5"
   },
   "devDependencies": {
     "@types/node": "22.13.12",
