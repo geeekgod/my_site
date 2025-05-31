@@ -80,7 +80,7 @@ export default function About() {
             </a>
             .<br />I thrive on crafting digital experiences, whether it&apos;s
             apps, websites, or systems - anything that runs on a computer. With
-            three years of experience under my belt, I make sure everything I
+            four years of experience under my belt, I make sure everything I
             work on is polished to perfection.
           </motion.p>
         </div>
