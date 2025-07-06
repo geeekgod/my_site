@@ -22,7 +22,7 @@
     "axios": "^1.10.0",
     "babel-plugin-react-compiler": "^19.0.0-beta-714736e-20250131",
     "email-validator": "^2.0.4",
-    "framer-motion": "^12.22.0",
+    "framer-motion": "^12.16.0",
     "next": "15.3.4",
     "next-themes": "^0.4.6",
     "nodemailer": "^7.0.4",
