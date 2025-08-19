@@ -1,7 +1,7 @@
-import Head from "next/head";
-import React from "react";
-import { motion } from "framer-motion";
-import { ContactForm } from "../../components/main/contact-form";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,28 +10,20 @@ export const metadata: Metadata = {
 };
 
 const Contact = () => {
-  return (
-    <>
-      <Head>
-        <title>Contact | Rishabh Singh</title>
-        <meta
-          name="description"
-          content="Contact Rishabh Singh. Reach me out with any queries you've!"
-        />
-      </Head>
-      <div className="text-white">
-        <div className="flex items-center flex-col justify-center">
-          <h3 className="text-3xl font-semibold mt-7 border-white pb-4 border-b-4">
-            Contact Me
-          </h3>
+  const router = useRouter();
 
-          <h3 className="text-xl font-medium mt-6 text-gray-300 px-12 text-center">
-            Got an Idea to work on or Just say hello!
-          </h3>
-        </div>
-        <ContactForm />
+  useEffect(() => {
+    // Redirect to main terminal with contact command
+    router.replace("/?cmd=contact");
+  }, [router]);
+
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-400 mx-auto mb-4"></div>
+        <p>Redirecting to terminal...</p>
       </div>
-    </>
+    </div>
   );
 };
 

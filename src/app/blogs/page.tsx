@@ -1,7 +1,8 @@
-import Head from "next/head";
-import React from "react";
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Metadata } from "next";
-import { BlogView } from "../../components/blogs/blog-view";
 
 export const metadata: Metadata = {
   title: "Blogs | Rishabh Singh",
@@ -9,29 +10,20 @@ export const metadata: Metadata = {
 };
 
 const Blogs = () => {
-  return (
-    <>
-      <Head>
-        <title>Blog | Rishabh Singh</title>
-        <meta
-          name="description"
-          content="Blogs by Rishabh Singh. Read my blogs on various topics!"
-        />
-      </Head>
-      <div className="text-white">
-        <div className="flex items-center flex-col justify-center">
-          <h3 className="text-3xl font-semibold mt-7 border-white pb-4 border-b-4">
-            My Blogs
-          </h3>
+  const router = useRouter();
 
-          <h3 className="text-xl font-medium mt-6 text-gray-300 px-12 text-center">
-            Read my blogs on various topics, including technology, programming,
-            and more!
-          </h3>
-        </div>
-        <BlogView />
+  useEffect(() => {
+    // Redirect to main terminal with blogs command
+    router.replace("/?cmd=blogs");
+  }, [router]);
+
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-400 mx-auto mb-4"></div>
+        <p>Redirecting to terminal...</p>
       </div>
-    </>
+    </div>
   );
 };
 
