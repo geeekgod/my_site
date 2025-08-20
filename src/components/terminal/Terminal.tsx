@@ -59,23 +59,25 @@ export const Terminal: React.FC = () => {
       onClick={handleTerminalClick}
       className={`w-full h-screen overflow-y-auto font-mono text-xs sm:text-sm cursor-text ${theme.background} ${theme.text} ${theme.scrollbar}`}
     >
+      <div className="mb-4">
+        <div
+          className={`flex items-center space-x-2 mb-2 fixed ${theme.background} w-full p-4 z-100`}
+        >
+          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          <span className={`ml-4 text-sm ${theme.primary}`}>
+            rishabh@geeekgod.in
+          </span>
+        </div>
+      </div>
       <div className="p-2 sm:p-4 pb-20">
         {/* Terminal Header */}
-        <div className="mb-4">
-          <div className="flex items-center space-x-2 mb-2">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <span className={`ml-4 text-sm ${theme.primary}`}>
-              rishabh@geeekgod.in
-            </span>
-          </div>
-          <div className="text-xs opacity-75 mb-4">
-            Welcome to Rishabh Singh's interactive terminal portfolio.
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            Type 'help' to see available commands.
-          </div>
+        <div className="text-xs opacity-75 mb-4 mt-8">
+          Welcome to Rishabh Singh's interactive terminal portfolio.
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
+          Type 'help' to see available commands.
         </div>
 
         {/* Terminal Output */}
