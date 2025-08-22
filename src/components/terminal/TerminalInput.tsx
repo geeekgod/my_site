@@ -130,3 +130,5 @@ export const TerminalInput = forwardRef<HTMLInputElement, TerminalInputProps>(
     );
   }
 );
+
+TerminalInput.displayName = "TerminalInput";

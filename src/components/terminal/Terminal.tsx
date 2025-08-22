@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { TerminalOutput } from "./TerminalOutput";
 import { TerminalInput } from "./TerminalInput";
 import { useTerminal } from "../../hooks/useTerminal";
 import { useTheme } from "../../hooks/useTheme";
 
-export const Terminal: React.FC = () => {
+export const TerminalWrapper: React.FC = () => {
   const searchParams = useSearchParams();
   const {
     history,
@@ -74,10 +74,10 @@ export const Terminal: React.FC = () => {
       <div className="p-2 sm:p-4 pb-20">
         {/* Terminal Header */}
         <div className="text-xs opacity-75 mb-4 mt-8">
-          Welcome to Rishabh Singh's interactive terminal portfolio.
+          Welcome to Rishabh Singh&apos;s interactive terminal portfolio.
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
-          Type 'help' to see available commands.
+          Type &apos;help&apos; to see available commands.
         </div>
 
         {/* Terminal Output */}
@@ -98,3 +98,11 @@ export const Terminal: React.FC = () => {
     </div>
   );
 };
+
+export const Terminal = () => {
+  return (
+    <Suspense>
+      <TerminalWrapper />
+    </Suspense>
+  )
+}
