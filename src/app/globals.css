@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @import "tailwindcss";
+
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+}
 
 @theme {
   --breakpoint-xs: 30rem;
@@ -16,7 +18,7 @@
 
 html,
 body {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   padding: 0;
   margin: 0;
   color: white;
