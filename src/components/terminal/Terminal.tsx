@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback, Suspense } from "react";
+import React, { useEffect, useRef, useCallback, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { TerminalOutput } from "./TerminalOutput";
 import { TerminalInput } from "./TerminalInput";
@@ -14,7 +14,6 @@ export const TerminalWrapper: React.FC = () => {
     currentCommand,
     setCurrentCommand,
     executeCommand,
-    clearTerminal,
     commandHistory,
     historyIndex,
     setHistoryIndex,
@@ -110,5 +109,5 @@ export const Terminal = () => {
     <Suspense>
       <TerminalWrapper />
     </Suspense>
-  )
-}
+  );
+};

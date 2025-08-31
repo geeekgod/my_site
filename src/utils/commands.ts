@@ -30,10 +30,6 @@ const helpCommand: Command = {
     { type: "output", content: "  experience    - See my work experience" },
     {
       type: "output",
-      content: "  education     - View my educational background",
-    },
-    {
-      type: "output",
       content: "  social        - Links to my social profiles",
     },
     { type: "output", content: "  resume        - Download my resume" },
@@ -78,9 +74,9 @@ const aboutCommand: Command = {
     anything that runs on a computer. With four years of experience 
     under my belt, I make sure everything I work on is polished to 
     perfection.
-    
-    I develop quality software to help businesses leverage their 
-    products and create meaningful user experiences.
+
+    I'm currently focused on building Conversational AI Agents, and
+    integrating AI into existing products to enhance user experience.
     `,
     },
   ],
@@ -174,31 +170,52 @@ const projectsCommand: Command = {
     ╭─────────────────────────────────────────────────────────────╮
     │                       MY PROJECTS                           │
     ╰─────────────────────────────────────────────────────────────╯
+
+    🤖 Vaani
+    ├── Led the development of the new feature/product in favor of IIR (Inka Insurance Report) Dashboard.
+    ├── A Conversational AI Agent which helps user's navigate, understand and get a better understanding of the report dashboard.
+    ├── Tech: Python, Docker, LLMs, and a lot lot more of AI stuff.
+    ├── Role: Lead Developer
+    └── Built at: Inka Insurance
+
+    📞 OutCallerAI
+    ├── Built the entire product from scratch.
+    ├── An AI-powered outbound caller that engages customers in human-like conversations and helps businesses automate their outreach efforts.
+    ├── Tech: React, NextJS, Python (FastAPI), Docker, LLMs, PostgreSQL, Redis, Twilio, Plivo and a lot lot more of AI stuff.
+    ├── Role: Lead Developer, Manager, Product Owner
+    └── Built at: SSingularity Technologies (2025)
+
+    💼 OutRiskAI
+    ├── Built the entire product from scratch.
+    ├── It provides comprehensive risk analysis, summarization, and access to expert legal assistance.
+    ├── Tech: React, NextJS, Python (FastAPI), Docker, LLMs, PostgreSQL, Redis and a lot of AI stuff
+    ├── Role: Lead Developer, Manager, Product Owner
+    └── Built at: SSingularity Technologies (2024-2025)
     
-    🌐 Personal Portfolio (This Website)
-    ├── Tech: Next.js, TypeScript, Tailwind CSS
-    ├── Features: Terminal interface, Multiple themes, SEO optimized
-    └── GitHub: ${personalInfo.github}/my_site
+    📚 Hiranandani Foundation School App
+    ├── Mobile App that allows parents easily access all the course work,
+    ├── events, attendance records, fees information and many more at their finger tips.
+    ├── Tech: React, React Native
+    ├── Scale: Has around 2k+ monthly active users (2024-2025)
+    ├── Role: Lead Developer, Manager, Product Owner
+    └── Built at: SSingularity Technologies
+
+    💼 Tata Embrace Lite
+    ├── A micro LMS integrated with existing LMS of Entire Tata Group HR
+    ├── Integration had to be done on a legacy unmaintained system which was a challenge.
+    ├── Tech: React, Asp.Net, Azure, Azure DevOps
+    ├── Scale: Used by the entire Tata Group (100,000+ users)
+    ├── Role: Lead Developer, Manager, Product Owner
+    └── Built at: SSingularity Technologies (2023-2025)
     
-    🚀 Enterprise Applications at Inka
-    ├── Tech: React, Node.js, MongoDB, AWS
-    ├── Scale: Handling millions of users
-    └── Focus: Insurance technology solutions
-    
-    📝 Blog Platform Integration
-    ├── Tech: Medium API, RSS feeds
-    ├── Features: Real-time article fetching
-    └── Integration: Seamless content management
-    
-    🔧 Various Open Source Contributions
-    ├── Languages: JavaScript, TypeScript, Python
-    ├── Focus: Web development, DevOps tools
-    └── Community: Active contributor and maintainer
-    
-    💡 Side Projects & Experiments
-    ├── Game development (started at 14)
-    ├── Automation scripts
-    └── Performance optimization tools
+    💲 Deloitte x Quodeck integration middleware
+    ├── A middleware application which allows Quodeck's learning platform to integrate with Deloitte's LMS
+    ├── Tech: Asp.Net Core, MS-SQL, Azure, Microservices
+    ├── Scale: Deloitte's LMS had a humongous data warehouse which included
+    ├── millions of records, which were handled seamlessly by the middleware.
+    ├── Role: Lead Developer, Manager, Product Owner
+    └── Built at: SSingularity Technologies (2022-2025)
+
     
     Visit my GitHub: ${personalInfo.github}
     `,
@@ -218,16 +235,44 @@ const experienceCommand: Command = {
     ╰─────────────────────────────────────────────────────────────╯
     
     🏢 Software Engineer II (SDE 2) - Inka
-    ├── Duration: Current Role
-    ├── Location: Mumbai, India
-    ├── Focus: Insurance technology solutions
+    ├── Duration: Feb 2025 - Present
+    ├── Location: Thane, India (Remote)
+    ├── Focus: Insurance empowered by AI & Data
     ├── Responsibilities:
-    │   ├── Full-stack development with React & Node.js
+    │   ├── Full-stack development
     │   ├── System architecture and design
     │   ├── Performance optimization and scaling
-    │   ├── Mentoring junior developers
+    │   ├── Assist junior developers
+    │   ├── Driving healthy technical culture
     │   └── Code review and quality assurance
-    └── Technologies: React, Node.js, MongoDB, AWS, Docker
+    └── Technologies: Javascript, Python, Docker, LLMs, AWS, GCP and many more cool stuff.
+
+    🏢 Founding Engineer - SSingularity Technologies
+    ├── Duration: Jan 2024 - Feb 2025
+    ├── Location: Thane, India (WFO)
+    ├── Focus: Empowering businesses with cutting-edge AI solutions
+    ├── Responsibilities:
+    │   ├── All round Engineering (Web, Mobile, Backend, DevOps)
+    │   ├── System architecture and design
+    │   ├── Performance optimization and scaling
+    │   ├── Leading the entire engineering team
+    │   ├── Driving healthy technical culture
+    │   └── Code review and quality assurance
+    └── Technologies: Javascript, Python, Ruby, C#, PHP, Docker, LLMs, AWS, Azure, Digital Ocean and many more cool stuff.
+
+    🏢 Tech Intern - SSingularity Technologies
+    ├── Duration: May 2021 - Jan 2024
+    ├── Location: Thane, India (Hybrid)
+    ├── Focus: Building scalable applications and services
+    ├── Responsibilities:
+    │   ├── Started from scratch as an intern and quickly rose to become a key team member
+    │   ├── From Frontend to Backend to DevOps, handled it all
+    │   ├── System architecture and design
+    │   ├── Performance optimization and scaling
+    │   ├── Leading the entire engineering team
+    │   ├── Driving healthy technical culture
+    │   └── Code review and quality assurance
+    └── Technologies: Javascript, Python, Ruby, C#, PHP, Docker, LLMs, AWS, Azure, Digital Ocean and many more cool stuff.
     
     💻 4+ Years of Programming Experience
     ├── Started coding at age 14
@@ -236,7 +281,7 @@ const experienceCommand: Command = {
     └── Passion for creating polished, high-quality software
     
     🎯 Key Achievements:
-    ├── Built scalable applications serving millions of users
+    ├── Built scalable applications serving hundred thousands of users
     ├── Optimized system performance and reduced load times
     ├── Implemented best practices for code quality
     └── Contributed to team growth and knowledge sharing
@@ -473,50 +518,12 @@ const resumeCommand: Command = {
   ],
 };
 
-const educationCommand: Command = {
-  name: "education",
-  description: "View my educational background",
-  execute: () => [
-    {
-      type: "output",
-      content: `
-    ╭─────────────────────────────────────────────────────────────╮
-    │                     EDUCATION                               │
-    ╰─────────────────────────────────────────────────────────────╯
-    
-    🎓 Self-Taught Developer Journey
-    ├── Started programming at age 14
-    ├── Focus: Practical, hands-on learning
-    ├── Continuous learning through:
-    │   ├── Online courses and tutorials
-    │   ├── Open source contributions
-    │   ├── Real-world project experience
-    │   └── Industry best practices
-    └── Philosophy: Learning by building and doing
-    
-    📚 Continuous Learning
-    ├── Stay updated with latest technologies
-    ├── Participate in developer communities
-    ├── Read technical blogs and documentation
-    └── Experiment with new tools and frameworks
-    
-    🏆 Practical Experience Over Formal Education
-    ├── 4+ years of professional development
-    ├── Built applications serving millions of users
-    ├── Mentored junior developers
-    └── Contributed to open source projects
-    `,
-    },
-  ],
-};
-
 export const commands: Command[] = [
   helpCommand,
   aboutCommand,
   contactCommand,
   skillsCommand,
   experienceCommand,
-  educationCommand,
   projectsCommand,
   blogsCommand,
   socialCommand,

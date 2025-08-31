@@ -33,7 +33,6 @@ export const TerminalInput = forwardRef<HTMLInputElement, TerminalInputProps>(
       "blogs",
       "skills",
       "experience",
-      "education",
       "social",
       "resume",
       "themes",
