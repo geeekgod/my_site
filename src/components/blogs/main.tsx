@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-const MainBlogs = () => {
+export default function MainBlogs() {
   const router = useRouter();
 
   useEffect(() => {
@@ -19,6 +19,4 @@ const MainBlogs = () => {
       </div>
     </div>
   );
-};
-
-export default MainBlogs;
+}

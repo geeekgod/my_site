@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-const MainContact = () => {
+export default function MainContact() {
   const router = useRouter();
 
   useEffect(() => {
@@ -19,6 +19,4 @@ const MainContact = () => {
       </div>
     </div>
   );
-};
-
-export default MainContact;
+}

@@ -23,6 +23,7 @@ export const TerminalWrapper: React.FC = () => {
   const { theme, changeTheme } = useTheme();
   const terminalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const executeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Auto-focus input when terminal is clicked
   const handleTerminalClick = useCallback(() => {
@@ -47,10 +48,15 @@ export const TerminalWrapper: React.FC = () => {
     // Check for command in URL parameters
     const cmd = searchParams.get("cmd");
     if (cmd) {
-      setTimeout(() => {
+      executeTimeoutRef.current = setTimeout(() => {
         executeCommand(cmd, changeTheme);
       }, 500); // Small delay to ensure terminal is ready
     }
+    return () => {
+      if (executeTimeoutRef.current) {
+        clearTimeout(executeTimeoutRef.current);
+      }
+    };
   }, [searchParams, executeCommand, changeTheme]);
 
   return (
