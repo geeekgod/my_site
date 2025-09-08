@@ -3,28 +3,26 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import Script from "next/script";
 import type { Metadata } from "next";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rishabh Singh",
+  title: "Rishabh Singh - Terminal Portfolio",
   description:
-    "I'm a passionate Software Engineer. I develop quality software to help businesses to leverage their products.",
+    "Interactive terminal portfolio of Rishabh Singh, Software Engineer. Experience my portfolio through a command-line interface with multiple themes and keyboard shortcuts.",
   keywords:
-    "Rishabh, Singh, Rishabh Singh Software Engineer, Software Engineer, Rishabh Singh Fullstack developer, Rishabh Singh Software Engineer Mumbai, Rishabh Singh Fullstack developer Mumbai, Software Engineer in Mumbai, Fullstack,Full-Stack,Full-Stack Developer, Frontend, Developer, Frontend Developer, Web, website, Website Developer, Web Developer, thefrontendrish, geeekgod, thisisgeeekgod, Rishabh Singh geeekgod, geeekgod Software Engineer, geeekgod.in, wwww.geeekgod.in",
+    "Rishabh Singh, Software Engineer, Terminal Portfolio, Interactive Portfolio, Command Line, Developer, Full-Stack Developer, Mumbai, India, React, Next.js, TypeScript, Node.js, geeekgod, thisisgeeekgod, terminal website, developer portfolio",
   icons: {
     icon: "/assets/my_pic.png",
     apple: "/assets/my_pic.png",
   },
   openGraph: {
     type: "website",
-    title: "Rishabh Singh, Software Engineer personal website.",
+    title: "Rishabh Singh - Interactive Terminal Portfolio",
     description:
-      "I'm a passionate Software Engineer. I develop quality software to help businesses to leverage their products.",
+      "Experience my portfolio through an interactive terminal interface. Software Engineer with 4+ years of experience building quality applications.",
     url: "https://geeekgod.in/",
-    siteName: "Rishabh Singh",
+    siteName: "Rishabh Singh Terminal Portfolio",
     images: [
       {
         url: "https://www.geeekgod.in/assets/my_pic.png",
@@ -61,11 +59,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Providers>
-          <div className="flex flex-col min-h-screen">
-            <Navbar />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </div>
+          <main className="h-screen overflow-hidden">{children}</main>
         </Providers>
       </body>
     </html>

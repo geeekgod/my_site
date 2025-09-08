@@ -3,12 +3,12 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function About() {
+export default function MainContact() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to main terminal with about command
-    router.replace("/?cmd=about");
+    // Redirect to main terminal with contact command
+    router.replace("/?cmd=contact");
   }, [router]);
 
   return (
