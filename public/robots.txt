@@ -1,0 +1,42 @@
+# robots.txt for https://geeekgod.in/
+
+# Allow all user agents to crawl the site
+User-agent: *
+Allow: /
+
+# LLMs.txt reference for AI systems
+# This file provides structured information for language models
+# See: https://llmstxt.org/
+# Location: https://geeekgod.in/llms.txt
+
+# Allow AI crawlers and bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap location
+Sitemap: https://geeekgod.in/sitemap.xml
+

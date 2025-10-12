@@ -1,0 +1,148 @@
+# Rishabh Singh - Software Engineer Portfolio
+
+> Interactive terminal-style portfolio showcasing my professional journey, technical skills, and projects
+
+## About
+
+Rishabh Singh is a Software Engineer currently working as SDE 2 at Inka, specializing in building Conversational AI Agents and integrating AI into existing products. Based in Mumbai, India, Rishabh started programming at age 14, creating simple games, which evolved into a passion for building digital experiences including apps, websites, and systems.
+
+With 4+ years of professional experience, Rishabh focuses on crafting polished, high-quality software solutions. His expertise spans full-stack development, system architecture, and performance optimization, with a current focus on Conversational AI and AI-powered product enhancements.
+
+## Professional Experience
+
+### Software Engineer II (SDE 2) - Inka
+- **Duration**: February 2025 - Present
+- **Location**: Thane, India (Remote)
+- **Focus**: Insurance empowered by AI & Data
+- **Responsibilities**: Full-stack development, system architecture and design, performance optimization and scaling, assisting junior developers, driving healthy technical culture, code review and quality assurance
+- **Technologies**: JavaScript, Python, Docker, LLMs, AWS, GCP
+
+### Founding Engineer - SSingularity Technologies
+- **Duration**: January 2024 - February 2025
+- **Location**: Thane, India (WFO)
+- **Focus**: Empowering businesses with cutting-edge AI solutions
+- **Responsibilities**: All-round engineering (Web, Mobile, Backend, DevOps), system architecture and design, performance optimization and scaling, leading the entire engineering team, driving healthy technical culture
+- **Technologies**: JavaScript, Python, Ruby, C#, PHP, Docker, LLMs, AWS, Azure, Digital Ocean
+
+### Tech Intern - SSingularity Technologies
+- **Duration**: May 2021 - January 2024
+- **Location**: Thane, India (Hybrid)
+- **Focus**: Building scalable applications and services
+- **Technologies**: JavaScript, Python, Ruby, C#, PHP, Docker, LLMs, AWS, Azure, Digital Ocean
+
+## Technical Skills
+
+### Frontend Development
+- React.js & Next.js
+- TypeScript & JavaScript
+- Tailwind CSS & CSS3
+- HTML5 & Responsive Design
+- Framer Motion & Animations
+
+### Backend Development
+- Node.js & Express.js
+- Python & FastAPI
+- REST APIs & GraphQL
+- Microservices Architecture
+
+### Database
+- MongoDB & PostgreSQL
+- Redis & Caching
+- Database Design
+
+### DevOps & Cloud
+- Docker & Kubernetes
+- AWS & Cloud Services
+- Git & GitHub
+- CI/CD Pipelines
+- Linux & Terminal
+
+### Other Skills
+- System Design
+- Performance Optimization
+- Testing (Jest, Cypress)
+- Agile Development
+- AI/ML Integration
+- LLM Development
+
+## Projects
+
+### Vaani - Conversational AI Agent
+Led the development of a new feature/product for IIR (Inka Insurance Report) Dashboard. Vaani is a Conversational AI Agent that helps users navigate, understand, and get a better understanding of the report dashboard.
+- **Technologies**: Python, Docker, LLMs
+- **Role**: Lead Developer
+- **Company**: Inka Insurance
+
+### OutCallerAI
+Built the entire product from scratch. An AI-powered outbound caller that engages customers in human-like conversations and helps businesses automate their outreach efforts.
+- **Technologies**: React, Next.js, Python (FastAPI), Docker, LLMs, PostgreSQL, Redis, Twilio, Plivo
+- **Role**: Lead Developer, Manager, Product Owner
+- **Company**: SSingularity Technologies (2025)
+
+### OutRiskAI
+Built the entire product from scratch. Provides comprehensive risk analysis, summarization, and access to expert legal assistance.
+- **Technologies**: React, Next.js, Python (FastAPI), Docker, LLMs, PostgreSQL, Redis
+- **Role**: Lead Developer, Manager, Product Owner
+- **Company**: SSingularity Technologies (2024-2025)
+
+### Hiranandani Foundation School App
+Mobile app that allows parents to easily access all course work, events, attendance records, fees information and more.
+- **Technologies**: React, React Native
+- **Scale**: 2,000+ monthly active users
+- **Role**: Lead Developer, Manager, Product Owner
+- **Company**: SSingularity Technologies (2024-2025)
+
+### Tata Embrace Lite
+A micro LMS integrated with the existing LMS of the entire Tata Group HR. Integration had to be done on a legacy unmaintained system.
+- **Technologies**: React, ASP.NET, Azure, Azure DevOps
+- **Scale**: Used by the entire Tata Group (100,000+ users)
+- **Role**: Lead Developer, Manager, Product Owner
+- **Company**: SSingularity Technologies (2023-2025)
+
+### Deloitte x Quodeck Integration Middleware
+A middleware application that allows Quodeck's learning platform to integrate with Deloitte's LMS. Handled millions of records seamlessly.
+- **Technologies**: ASP.NET Core, MS-SQL, Azure, Microservices
+- **Scale**: Millions of records
+- **Role**: Lead Developer, Manager, Product Owner
+- **Company**: SSingularity Technologies (2022-2025)
+
+## Contact
+
+- **Email**: ris8645208@gmail.com
+- **Website**: https://geeekgod.in
+- **GitHub**: https://github.com/geeekgod
+- **LinkedIn**: https://linkedin.com/in/geeekgod
+- **Medium**: https://medium.com/@geeekgod
+- **Location**: Mumbai, India
+
+## Website Features
+
+This portfolio website is an interactive terminal emulator that allows visitors to explore information through command-line interface. Available commands include:
+- `help` - Show available commands
+- `about` - Learn more about Rishabh
+- `contact` - Get contact information
+- `projects` - View projects and repositories
+- `blogs` - Read latest blog posts
+- `skills` - View technical skills
+- `experience` - See work experience
+- `social` - Links to social profiles
+- `resume` - Download resume
+- `theme [name]` - Change terminal theme
+
+## Additional Information
+
+- Started programming at age 14
+- Built scalable applications serving hundreds of thousands of users
+- Passionate about creating polished, high-quality software
+- Currently focused on Conversational AI and AI-powered product enhancements
+- Active blogger sharing technical knowledge on Medium
+- Strong advocate for code quality and best practices
+
+# References
+
+- Main portfolio: https://geeekgod.in/
+- GitHub profile: https://github.com/geeekgod
+- LinkedIn: https://linkedin.com/in/geeekgod
+- Technical blog: https://medium.com/@geeekgod
+- Repository: https://github.com/geeekgod/my_site
+
