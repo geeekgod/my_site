@@ -150,7 +150,7 @@ export default function RootLayout({
                 url: "https://geeekgod.in",
               },
               inLanguage: "en-US",
-              copyrightYear: 2025,
+              copyrightYear: new Date().getFullYear(),
               creator: {
                 "@type": "Person",
                 name: "Rishabh Singh",
